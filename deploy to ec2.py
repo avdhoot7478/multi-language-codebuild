@@ -1,6 +1,6 @@
 import paramiko
 
-host = "EC2-IP"
+host = "13.201.166.8 "
 
 username = "ec2-user"
 
