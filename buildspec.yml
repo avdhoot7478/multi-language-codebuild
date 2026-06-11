@@ -12,10 +12,10 @@ phases:
       - python numbers.py
 
       - echo "Compiling Java Program"
-      - javac helloworld.java
+      - javac HelloWorld.java
 
       - echo "Running Java Program"
-      - java helloworld
+      - java HelloWorld
 
 artifacts:
   files:
