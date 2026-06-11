@@ -9,16 +9,19 @@ phases:
   build:
     commands:
       - echo "Running Python Program"
-      - python python/numbers.py
-
-      - echo "Listing Java Files"
-      - ls -la java/
+      - python numbers.py
 
       - echo "Compiling Java Program"
       - javac java/HelloWorld.java
 
       - echo "Running Java Program"
       - java -cp java HelloWorld
+
+      - echo "Setting PEM permissions"
+      - chmod 400 multi-language-key.pem
+
+      - echo "Deploying to EC2"
+      - scp -o StrictHostKeyChecking=no -i multi-language-key.pem numbers.py ec2-user@13.201.166.8:/home/ec2-user/
 
 artifacts:
   files:
