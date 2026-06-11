@@ -4,7 +4,7 @@ host = "13.201.166.8 "
 
 username = "ec2-user"
 
-key = "key.pem"
+key = "multi-language-key.pem"
 
 ssh = paramiko.SSHClient()
 
