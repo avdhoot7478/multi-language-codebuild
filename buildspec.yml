@@ -9,13 +9,16 @@ phases:
   build:
     commands:
       - echo "Running Python Program"
-      - python numbers.py
+      - python python/numbers.py
+
+      - echo "Listing Java Files"
+      - ls -la java/
 
       - echo "Compiling Java Program"
-      - javac HelloWorld.java
+      - javac java/HelloWorld.java
 
       - echo "Running Java Program"
-      - java HelloWorld
+      - java -cp java HelloWorld
 
 artifacts:
   files:
