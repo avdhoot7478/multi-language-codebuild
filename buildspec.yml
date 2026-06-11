@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.11
+      java: corretto17
+
+  build:
+    commands:
+      - echo "Running Python Program"
+      - python python/numbers.py
+
+      - echo "Compiling Java Program"
+      - javac java/HelloWorld.java
+
+      - echo "Running Java Program"
+      - java -cp java HelloWorld
+
+artifacts:
+  files:
+    - '**/*'
